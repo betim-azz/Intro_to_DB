@@ -8,8 +8,12 @@ try:
     )
 
     cursor = connection.cursor()
-    cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
-    print("Database 'alx_book_store' created successfully!")
+
+    cursor.execute(
+        "CREATE DATABASE IF NOT EXISTS alx_book_store"
+    )
+
+    connection.commit()
     cursor.close()
     connection.close()
 
